@@ -181,10 +181,15 @@ body{
     display: flex;
     gap: 30px;}
 .item.team{
-    background-color: var(--primery-white-color);}  
+    background-color: var(--primery-white-color);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px
+     rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);}  
+    
 .team.div{
    padding-top: 30px;
     padding-bottom: 30px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px
+     rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }      
 
 .team-name{
@@ -246,13 +251,16 @@ body{
         letter-spacing: 0.03em;
         border: 1px solid transparent;
         border-radius: 4px;}
-  .filter-button:hover{background-color:var(--akcent-color); color:var(--primery-white-color);}
+  .filter-button:hover,.filter-button:focus{background-color:var(--akcent-color);
+                        color:var(--primery-white-color);
+                        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px
+                         rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);}
    /* Portfolio List */
-   .portfolio.main{
+ .portfolio.main{
     padding-top: 94px;
     padding-bottom: 94px;
    }
-   .list-header{
+.list-header{
          font-size: 18px;
         line-height: 2;
         letter-spacing: 0.06em;
@@ -280,6 +288,10 @@ body{
     flex-wrap: wrap;
     margin-top: 50px;
     gap: 30px;
+}
+.project.item:hover{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px
+     rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .border.project{
     border-bottom: 1px solid #EEEEEE;
