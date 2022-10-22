@@ -14,7 +14,7 @@ body{
     color:var(--primary-text-color);
     background-color:var(--primery-white-color); 
     font-size: 14px;
-    width: 1600px;}
+    }
 
  h1,h2,h3,ul,p{margin:0; padding: 0;}
  img,a{display: block;}
@@ -68,7 +68,8 @@ body{
 
 
  /*LINKS*/
-.link:hover{color:var(--akcent-color)}
+ .link:focus{color:var(--akcent-color)}
+ .link:hover{color:var(--akcent-color)}
 .link{color: var(--primary-text-color);
     font-weight: 500;
     line-height: 1.14;
@@ -107,6 +108,9 @@ body{
      text-align: center; 
      padding-top: 200px;
      padding-bottom: 200px;
+     margin-right: auto;
+     margin-left: auto;
+     max-width: 1600px;
      background-image:linear-gradient(rgba(47, 48, 58, 0.4),rgba(47, 48, 58, 0.4)),
      url(../images/herofon.jpg);
 }
@@ -161,6 +165,7 @@ body{
         letter-spacing: 0.03em;
         text-transform: uppercase;
         margin-bottom: 10px;
+        margin-top: 30px;
         }
  .edge-text{
         color: var(--additional-text-color);
@@ -179,14 +184,15 @@ body{
 }
 .list.team{
     display: flex;
-    gap: 30px;}
-.item.team{
-    background-color: var(--primery-white-color);
+    gap: 30px;
+}
+.item.team{ 
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px
      rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);}  
     
 .team.div{
-   padding-top: 30px;
+    background-color: var(--primery-white-color);
+    padding-top: 30px;
     padding-bottom: 30px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px
      rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -289,7 +295,7 @@ body{
     margin-top: 50px;
     gap: 30px;
 }
-.project.item:hover{
+.project.item:hover,.project.item:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px
      rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -307,7 +313,7 @@ body{
     height: 12px;
     fill: var(--additional-text-color);
 }
-.smartphone{
+.phone{
     fill: var(--additional-text-color);
     width: 10px;
     height: 16px;
@@ -320,21 +326,25 @@ body{
 .item.contact:focus .envelope,
 .item.contact:hover .contact-link,
 .item.contact:focus .contact-link,
-.item.contact:hover .smartphone,
-.item.contact:focus .smartphone{
+.item.contact:hover .phone,
+.item.contact:focus .phone{
 fill: var(--akcent-color);
 color: var(--akcent-color);
 }
 .icon{
+    width: 70px;
+    height: 70px;
+}
+.icon-edge{
+    display: flex;
     width: 270px;
     height: 120px;
     border-radius: 4px;
-    padding: 25px 100px;
-    margin-bottom: 30px;
+   justify-content: center;
+   align-items: center;
     background-color:  #F5F4FA;
-    
 }
-.icon:not(:last-child) {
+.icon-edge:not(:last-child) {
     margin-right: 30px;
 }
 .list-icon{
@@ -342,7 +352,7 @@ color: var(--akcent-color);
     gap: 10px;
     
 }
-.team-icon{
+.list-icon{
     display: flex;
     gap: 10px;
     padding-top: 16px;
@@ -354,7 +364,8 @@ color: var(--akcent-color);
     width: 20px;
     height: 20px;
 }
-.list-team-link:hover .team-link{
+.list-team-link:hover .team-link,
+.list-team-link:focus .team-link{
     fill: var(--primery-white-color);
 }
 .list-team-link{
@@ -365,7 +376,8 @@ color: var(--akcent-color);
     height: 44px;
     border-radius: 50%;
 }
-.list-team-link:hover{
+.list-team-link:hover,
+.list-team-link:focus{
     background-color: var(--akcent-color);
 }
 .section-client{
@@ -395,10 +407,12 @@ color: var(--akcent-color);
     height: 92px;
     fill: #AFB1B8;
 }
-.client-link:hover{
+.client-link:hover,
+.client-link:focus{
     border: 1px solid var(--akcent-color);
 }
-.client-link:hover .client-icon{
+.client-link:hover .client-icon,
+.client-link:focus .client-icon{
     fill: var(--akcent-color);
 }
 .footer-flex{
@@ -433,6 +447,7 @@ color: var(--akcent-color);
     background: rgba(255, 255, 255, 0.1);
     fill: var(--primery-white-color);
 }
-.footer-icon:hover{
+.footer-icon:hover,
+.footer-icon:focus{
     background-color: var(--akcent-color);
 }
