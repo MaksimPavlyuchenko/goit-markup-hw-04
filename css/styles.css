@@ -38,7 +38,10 @@ body{
     align-items: center;}
 .list.contact{
     display:flex;
-    margin-left: auto;}
+    justify-content: center;
+    margin-left: auto;
+   
+}
 .list.contact .item+.item{
     margin-left: 50px;}
 .list.nav{
@@ -59,13 +62,18 @@ body{
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;} 
+ .contact-link:hover{color: var(--akcent-color);}   
  .contact-link:focus{color:var(--akcent-color);} 
- .contact-link {color:var(--additional-text-color);
+ .contact-link {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    color:var(--additional-text-color);
     text-decoration: none;
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;   
-    padding-left: 10px;}
+   }
 /* LOGO */
 .logo{color: var(--primary-text-color);
     font-family: 'Raleway';
@@ -79,22 +87,21 @@ body{
 .envelope{
     width: 16px;
     height: 12px;
-    fill: var(--additional-text-color);}
+    fill: var(--additional-text-color);
+    margin-right: 10px;}
 .phone{
     fill: var(--additional-text-color);
     width: 10px;
-    height: 16px;}
-.item.contact{
-    display: flex;
-    align-items:center;}
-.item.contact:hover .envelope,
-.item.contact:focus .envelope,
-.item.contact:hover .contact-link,
-.item.contact:focus .contact-link,
-.item.contact:hover .phone,
-.item.contact:focus .phone{
-    fill: var(--akcent-color);
-    color: var(--akcent-color);}
+    height: 16px;
+    margin-right: 10px;
+   }
+.contact-link:hover .envelope,
+.contact-link:focus .envelope,
+.contact-link:hover .phone,
+.contact-link:focus .phone{
+    color: var(--akcent-color);
+    fill: var(--akcent-color)
+    }
 /* Hero */
 .hero{
      background-color: #2F303A;
@@ -157,7 +164,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color:  #F5F4FA;}
-.icon-edge:not(:last-child) {
+.item-edge:not(:last-child) {
     margin-right: 30px;}
 .edge-title{
         font-size: 14px;
@@ -198,7 +205,8 @@ body{
 .team.div{
     background-color: var(--primery-white-color);
     padding-top: 30px;
-    padding-bottom: 30px;}      
+    padding-bottom: 30px;
+    border-radius: 0px 0px 4px 4px;}      
 .team-name{
     font-size: 16px;
     line-height: 1.19;
