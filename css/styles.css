@@ -8,6 +8,9 @@
     --akcent-color:#2196F3;
     --additional-white-color: #F5F5F5;
      }
+*:hover{
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
+}     
 /* BODY */
 body{
     /* padding-top: 80px; */
@@ -438,7 +441,8 @@ body{
    /* Portfolio List */
 .portfolio.main{
     padding-top: 94px;
-    padding-bottom: 94px;}
+    padding-bottom: 94px;
+    background-color:var(--primery-white-color)}
 
     /* Filter */
 .filter-button{ 
@@ -488,13 +492,11 @@ body{
     cursor: pointer;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px
      rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);}
-.project.item:hover .thumb-img::before{
-    opacity: 1;
-    transition: 250ms;
+.project.item:hover .thumb-img::after{
+    transform: translateY(-100%);
     }     
 .project.item:hover .thumb-img .project-text{
-    opacity: 1;
-    transition: 250ms;
+    transform: translateY(-100%);
     }
 .border.project{
     border-bottom: 1px solid #EEEEEE;
@@ -506,33 +508,31 @@ body{
     padding-right: 24px;}
 .thumb-img{
     position: relative;
+    overflow: hidden;
 }    
 .project-text{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 
-    opacity: 0;
-    transition: 250ms;
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+   
+    padding: 63px 24px;
+    font-size: 18px;
+    line-height: 1.556;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;}
 
-    width: 322px;
-
-     font-size: 18px;
-     line-height: 1.556;
-     letter-spacing: 0.03em;
-     color: #FFFFFF;}
-.thumb-img::before{
+.thumb-img::after{
     position: absolute;
-    bottom: 0;
-
+    
     content: "";
-    top: 0;
-    left: 0;
-
-    opacity: 0;
-    transition: 250ms;
-
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    
     width: 100%;
     height: 100%;
     background: rgba(33, 150, 243, 0.9);}
